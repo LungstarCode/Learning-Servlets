@@ -30,7 +30,7 @@ public class FirstServletClass extends HttpServlet {
 		
 		PrintWriter writer = response.getWriter();
 		
-		writer.print("Hello "+ name + "I am happy I met someone from "+ city);
+		writer.print("Hello "+ name + " I am happy I met someone from "+ city);
 		
 	}
 
