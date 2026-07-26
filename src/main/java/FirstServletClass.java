@@ -32,6 +32,8 @@ public class FirstServletClass extends HttpServlet {
 		
 		writer.print("Hello "+ name + " I am happy I met someone from "+ city);
 		
+		writer.close();
+		
 	}
 
 }
