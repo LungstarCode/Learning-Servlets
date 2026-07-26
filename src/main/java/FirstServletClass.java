@@ -23,14 +23,16 @@ public class FirstServletClass extends HttpServlet {
     }
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String name = request.getParameter("name");
 		String city = request.getParameter("city");
 		
 		PrintWriter writer = response.getWriter();
 		
-		writer.print("Hello "+ name + " I am happy I met someone from "+ city);
+		writer.println("<html><head><title>Servlet Response</title></head>");
+		writer.println("<body><h1>" + name + " You are from " + city + "</h1></body>");
+		writer.println("</html>");
 		
 		writer.close();
 		
